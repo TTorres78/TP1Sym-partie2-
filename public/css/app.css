@@ -1,0 +1,19 @@
+div.container {
+    margin-top: 20px;
+}
+
+div.ad-libelle {
+    padding: 2em;
+    background-size: cover;
+    background-position: center center;
+}
+
+div.ad-libelle h1,
+div.ad-libelle p {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+div.caroussel-caption {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}

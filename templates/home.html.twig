@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block libelle %} Nos Articles {% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <h1 class="my-5"> ARTICLES - TPSYm </h1>
+
+    <div class="row">  
+
+            {% for ad in ads %}
+                {% set url = path('ads_show', {'libelle' : ad.libelle}) %}
+
+
+                        <div class="col-md-4">
+                            <div class="card bg-light mb-3">           
+                                        <a href="{{ url }}">
+                                            <img src="{{ ad.image }}" alt="Image de l'article" style="height: 200px; width: 100%; display: block ">
+                                        </a>
+                                    
+
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                          <a href="{{ url }}">
+                                          {{ ad.libelle }}
+                                          </a>
+                                           
+                                        </h4>
+                                        
+                                        <p class="card-text">
+                                           Vous êtes inréressé par l'article ? Cliquez sur "En savoir plus..".
+                                        </p>
+                                        <a href="{{ url }}" class="btn btn-info">En savoir plus</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+            {% endfor %}
+    </div>
+</div>
+{% endblock %}

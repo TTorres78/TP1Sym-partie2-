@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création d'un article{% endblock %}
+
+
+{% block body %}
+
+    <div class="container">
+        <h1>Créer un nouvelle article</h1>
+
+        {{ form_start(form) }}
+
+        {{ form_widget(form) }}
+
+        <button type="submit" class="btn btn-primary">Créer un nouvelle article</button>
+
+        {{ form_end(form) }}
+        <button style="margin-top:20px"><a href="{{ path('ads_list')}}">Annuler</a></button>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+
+<script src="/js/ad.js">
+</script>
+{% endblock %}
